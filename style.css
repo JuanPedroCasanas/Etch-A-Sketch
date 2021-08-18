@@ -1,0 +1,31 @@
+body{
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  grid-template-rows: 1fr;
+  background-color: rgba(0, 100, 255, 0.3);
+}
+
+#drawingBoard{
+  justify-self: center;
+  align-self: center;
+  border: 2px solid black;
+  width: 45em;
+  height:45em;
+  display:grid;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  }
+
+#sidebar{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid{
+  transition: 0.3s;
+  
+}
