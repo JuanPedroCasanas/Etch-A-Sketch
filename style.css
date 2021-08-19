@@ -2,7 +2,6 @@ body{
   display: grid;
   grid-template-columns: 1fr 20fr;
   grid-template-rows: 1fr;
-  background-color: rgba(0, 100, 255, 0.3);
 }
 
 #drawingBoard{
@@ -21,7 +20,7 @@ body{
 
 #sidebar{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -32,15 +31,17 @@ body{
 
 #brushColorButton{
   background-image: url(/images/brushButton.svg);
-  background-position-x: 24.8em;
+  background-position-x: 24.18em;
   background-position-y: -9em;
+  z-index: 0;
 }
 
 #bgColorButton{
   background-image: url(/images/backgroundColor.svg);
   background-size: 14em;
-  background-position-x: 8.5em;
+  background-position-x: 7.2em;
   background-position-y: -0.3em;
+  position: relative;
 }
 
 #eraser{
@@ -48,16 +49,18 @@ body{
   background-size: 14.5em;
   background-position-x: 10em;
   background-position-y: -2em;
+  
 }
 
-.clickedEraser, .clickedBrushColorButton{
-  box-shadow: 1em 0em 0.3em rgba(238, 255, 0, 0.8);
+.clickedEraser, .clickedBrushColorButton, .clickedRainbow{
+  
+  border: dashed 0.2em rgb(255, 255, 0);
 }
 
 #clear{
   background-image: url(/images/clear.svg);
   background-size: 15em;
-  background-position-x: 10.8em;
+  background-position-x: 10.26em;
   background-position-y: -2.4em;
 }
 
@@ -67,4 +70,55 @@ body{
   background-size: 17em;
   background-position-x: 9em;
   background-position-y: -2.5em;
+}
+
+#bgColor, #brushColor{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+
+.colorText, .eraserText, .rainbowText, .clearText{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 50%;
+    margin-bottom: 70%;
+    border-radius: 10%;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    opacity: 0;
+    -webkit-user-select: none;      
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+
+.bgColorText{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    border-radius: 10%;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    opacity: 0;
+    -webkit-user-select: none;      
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+
+.colorText:hover, .eraserText:hover, .rainbowText:hover, .clearText:hover, .bgColorText:hover{
+  transition: 0.2s;
+  opacity: 1;
+}
+
+#sketchSize{
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
