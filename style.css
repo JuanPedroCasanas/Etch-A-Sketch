@@ -30,14 +30,14 @@ body{
 }
 
 #brushColorButton{
-  background-image: url(/images/brushButton.svg);
+  background-image: url(/Etch-A-Sketch/images/brushButton.svg);
   background-position-x: 24.18em;
   background-position-y: -9em;
   z-index: 0;
 }
 
 #bgColorButton{
-  background-image: url(/images/backgroundColor.svg);
+  background-image: url(/Etch-A-Sketch/images/backgroundColor.svg);
   background-size: 14em;
   background-position-x: 7.2em;
   background-position-y: -0.3em;
@@ -45,7 +45,7 @@ body{
 }
 
 #eraser{
-  background-image: url(/images/eraser.svg);
+  background-image: url(/Etch-A-Sketch/images/eraser.svg);
   background-size: 14.5em;
   background-position-x: 10em;
   background-position-y: -2em;
@@ -58,15 +58,15 @@ body{
 }
 
 #clear{
-  background-image: url(/images/clear.svg);
+  background-image: url(/Etch-A-Sketch/images/clear.svg);
   background-size: 15em;
   background-position-x: 10.26em;
   background-position-y: -2.4em;
 }
 
 #rainbow{
-  background-image: url(/images/rainbow.svg);
-  background-image: url(/images/rainbow.svg);
+  background-image: url(/Etch-A-Sketch/images/rainbow.svg);
+  background-image: url(/Etch-A-Sketch/images/rainbow.svg);
   background-size: 17em;
   background-position-x: 9em;
   background-position-y: -2.5em;
