@@ -29,3 +29,42 @@ body{
   transition: 0.3s;
   
 }
+
+#brushColorButton{
+  background-image: url(/images/brushButton.svg);
+  background-position-x: 24.8em;
+  background-position-y: -9em;
+}
+
+#bgColorButton{
+  background-image: url(/images/backgroundColor.svg);
+  background-size: 14em;
+  background-position-x: 8.5em;
+  background-position-y: -0.3em;
+}
+
+#eraser{
+  background-image: url(/images/eraser.svg);
+  background-size: 14.5em;
+  background-position-x: 10em;
+  background-position-y: -2em;
+}
+
+.clickedEraser, .clickedBrushColorButton{
+  box-shadow: 1em 0em 0.3em rgba(238, 255, 0, 0.8);
+}
+
+#clear{
+  background-image: url(/images/clear.svg);
+  background-size: 15em;
+  background-position-x: 10.8em;
+  background-position-y: -2.4em;
+}
+
+#rainbow{
+  background-image: url(/images/rainbow.svg);
+  background-image: url(/images/rainbow.svg);
+  background-size: 17em;
+  background-position-x: 9em;
+  background-position-y: -2.5em;
+}

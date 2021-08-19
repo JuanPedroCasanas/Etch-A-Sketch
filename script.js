@@ -1,4 +1,5 @@
 const html = document.querySelector('html');
+const body = document.querySelector('body');
 const drawingBoard = document.getElementById('drawingBoard');
 const clear = document.getElementById('clear')
 const eraser = document.getElementById('eraser');
@@ -14,6 +15,7 @@ let bgColor = bgColorSelector.value;
 
 sketchSize.value = 16; createGrid();
 sketchSize.addEventListener('change', () => { createGrid() })
+body.style.backgroundColor = hexToRGB(bgColor);
 clear.addEventListener('click', clearBoard);
 eraser.addEventListener('click', selectEraser);
 bgColorButton.addEventListener('click', selectBgColor);
@@ -38,6 +40,8 @@ function createGrid() {
 
 function selectColor() {
   color = brushColor.value;
+  eraser.classList.remove('clickedEraser');
+  brushColorButton.classList.add('clickedBrushColorButton');
 }
 
 function selectBgColor() {
@@ -53,6 +57,7 @@ function selectBgColor() {
       });
     }
   })
+  body.style.backgroundColor = hexToRGB(bgColor);
 }
 
 function paint(e) {
@@ -89,7 +94,17 @@ function clearBoard() {
 function selectEraser(e) {
   if (color != bgColor) {
     color = bgColor;
+    eraser.classList.add('clickedEraser');
+    brushColorButton.classList.remove('clickedBrushColorButton');
   } else {
     selectColor();
+    eraser.classList.remove('clickedEraser');
   }
+}
+
+function hexToRGB(hex) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${0.6})`;
 }
