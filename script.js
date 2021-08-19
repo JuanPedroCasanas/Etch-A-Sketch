@@ -92,34 +92,7 @@ function clearBoard() {
 
 }
 
-function selectColor() {
-  if (brushColorButton.classList == 'clickedBrushColorButton') {
-    paint;
-  } else {
-    brushColorButton.classList.remove('clickedBrushColorButton');
-    paint;
-  }
-}
 
-
-function selectEraser() {
-  if (eraser.classList == 'clickedEraser') {
-    paint;
-  } else {
-    eraser.classList.remove('clickedEraser');
-    paint;
-  }
-}
-
-
-function selectRainbow() {
-  if (rainbow.classList == 'clickedRainbow') {
-    paint;
-  } else {
-    rainbow.classList.remove('clickedRainbow');
-    paint;
-  }
-}
 
 function createRainbow(){
   const r = Math.floor((Math.random() * 255) + 1);
@@ -142,19 +115,16 @@ function selectMode(selected) {
       eraser.classList.remove('clickedEraser');
       rainbow.classList.remove('clickedRainbow');
       brushColorButton.classList.add('clickedBrushColorButton');
-      selectColor();
       break;
     case 'eraserButton':
       brushColorButton.classList.remove('clickedBrushColorButton');
       rainbow.classList.remove('clickedRainbow');
       eraser.classList.add('clickedEraser');
-      selectEraser()
       break;
     case 'rainbowButton':
       rainbow.classList.add('clickedRainbow');
       brushColorButton.classList.remove('clickedBrushColorButton');
       eraser.classList.remove('clickedEraser');
-      selectRainbow()
       break;
   }
 }
